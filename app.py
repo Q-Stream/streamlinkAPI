@@ -17,7 +17,7 @@ def get_query_string():
         return jsonify(data)
         
     except streamlink.NoPluginError:
-        return None
+        return jsonify(None)
 
 if __name__ == '__main__':
     app.run(debug=True)
